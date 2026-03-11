@@ -1,102 +1,136 @@
 # Customer Churn Prediction
 
-## Project Overview
+Week 1 & Week 2: EDA + Machine Learning Models
 
-Customer churn prediction is an important task for companies to identify customers who are likely to stop using their services. In this project, we analyze customer data and build a machine learning model to predict whether a customer will churn or not.
+## 📌 Course Information
 
-This project is implemented using Python in a Kaggle Notebook and uses the **Telco Customer Churn Dataset**.
+Course: Introduction to Applied Artificial Intelligence  
+Semester: BS 8th Semester  
+Project: Customer Churn Prediction  
+Author: Aliha Batool  
+Date: 11/03/2026  
 
-## Dataset
+---
 
-The dataset used in this project is the **Telco Customer Churn Dataset**.
+## 📊 Project Overview
 
-Dataset path:
-/kaggle/input/datasets/blastchar/telco-customer-churn/WA_Fn-UseC_-Telco-Customer-Churn.csv
+This project focuses on performing Exploratory Data Analysis (EDA) and building predictive models on the Telco Customer Churn dataset.
 
-The dataset contains information about telecom customers such as:
+Goals:
 
-* Customer demographics
-* Services subscribed by customers
-* Account information
-* Churn status (whether the customer left the company)
+- Understand customer behavior patterns  
+- Identify factors contributing to churn  
+- Build machine learning models to predict churn  
+- Discover high-risk customer groups  
+- Prepare actionable business insights  
 
-## Technologies Used
+---
 
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-* Seaborn
-* Scikit-learn
-* Kaggle Notebook
+## 📂 Dataset Information
 
-## Project Steps
+Source: Telco Customer Churn Dataset (Kaggle)
 
-### 1. Import Libraries
+Total Customers: 7,043  
+Total Features: 21  
+Target Variable: Churn (Yes/No)
 
-Necessary Python libraries such as pandas, numpy, matplotlib, and seaborn are imported.
+⚠️ Note: The dataset file (customer_data.csv) is not included in this repository. Please download it from Kaggle and place it in the project folder before running the notebooks.
 
-### 2. Load Dataset
+---
 
-The dataset is loaded using pandas from the Kaggle input directory.
+## 📁 Repository Structure
 
-### 3. Data Exploration
+week1-eda.ipynb → Exploratory Data Analysis notebook  
+week2-ml-models.ipynb → Machine learning models for churn prediction  
+README.md → Project documentation  
+.gitignore → Excludes unnecessary files  
 
-Basic information about the dataset is explored including:
+---
 
-* Data shape
-* Data types
-* Missing values
-* Summary statistics
+## 🔍 Key Insights
 
-### 4. Data Cleaning
+### Week 1: EDA
 
-Data preprocessing steps are performed such as:
+- Customers with month-to-month contracts have significantly higher churn rates.  
+- Customers with short tenure (< 6 months) are more likely to churn.  
+- Higher Monthly Charges are associated with increased churn.  
+- Fiber optic internet users show higher churn compared to DSL users.  
+- Customers using electronic check payment method have higher churn rates.  
 
-* Handling missing values
-* Converting data types
-* Encoding categorical variables
+### Week 2: ML Models
 
-### 5. Exploratory Data Analysis (EDA)
+Trained and compared three machine learning models:
 
-Data visualization techniques are used to understand patterns in the dataset, such as:
+- Logistic Regression  
+- Decision Tree Classifier  
+- Random Forest Classifier  
 
-* Churn distribution
-* Customer contract types
-* Monthly charges vs churn
+Evaluated models using Accuracy, Classification Report, and Confusion Matrix.
 
-### 6. Model Building
+Conducted feature engineering with new features:
 
-Machine learning models are used to predict customer churn.
+- TotalRevenue = tenure × monthly charges  
+- TotalServices = count of active services  
+- TenureGroup = binned tenure  
+- HighCharges = flag for high monthly charges  
 
-Common models used:
+Retrained the best model (Random Forest) with new features.
 
-* Logistic Regression
-* Decision Tree
-* Random Forest
+Observed improvement in prediction accuracy after feature engineering.
 
-### 7. Model Evaluation
+---
 
-The model performance is evaluated using:
+## 📊 Typical Model Accuracy (Expected Ranges)
 
-* Accuracy
-* Confusion Matrix
-* Classification Report
+| Model | Accuracy Range |
+|------|---------------|
+| Logistic Regression | 75–80% |
+| Decision Tree | 72–78% |
+| Random Forest | 78–83% |
 
-## What I Learned
+---
 
-From this project, I learned:
+## ⭐ Top Important Features (Typical)
 
-* How to load and explore real-world datasets
-* Data preprocessing techniques
-* Data visualization for analysis
-* Machine learning model training
-* Evaluating model performance
+- Contract type (month-to-month indicator)  
+- Tenure (how long customer has been with company)  
+- Monthly Charges  
+- Internet Service type  
+- Payment Method  
 
-## Conclusion
+---
 
-Customer churn prediction helps companies identify customers who may leave their services. By analyzing customer behavior and patterns, companies can take preventive actions to improve customer retention.
+## ⚙️ Setup Instructions
 
-## Author
+Install required libraries:
+Run the notebooks:
+jupyter notebook week1-eda.ipynb
+jupyter notebook week2-ml-models.ipynb
+---
 
-Aliha Batool
+## 🚀 Next Steps
+
+Week 3: Hyperparameter tuning and model optimization  
+Explore additional feature combinations  
+Handle class imbalance if needed  
+
+---
+
+## 🎯 Learning Outcomes
+
+Through this project, I developed skills in:
+
+- Data cleaning and preprocessing  
+- Exploratory Data Analysis (EDA)  
+- Data visualization using Matplotlib and Seaborn  
+- Building and comparing machine learning models (Logistic Regression, Decision Tree, Random Forest)  
+- Evaluating model performance metrics  
+- Feature engineering for improved predictions  
+- Identifying business insights from data  
+- Git and GitHub version control workflow  
+
+---
+
+## 📬 Contact
+
+GitHub: abhwork8
