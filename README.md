@@ -130,6 +130,60 @@ Through this project, I developed skills in:
 - Git and GitHub version control workflow  
 
 ---
+## Week 3  Model Optimization
+# Cross-Validation Results
+5-fold CV mean accuracy: 0.7882
+Standard deviation: 0.0117
+Most stable metric: Accuracy
+# Hyperparameter Tuning
+Random Forest
+Best parameters:
+n_estimators = 100
+max_depth = 10
+min_samples_split = 10
+min_samples_leaf = 4
+max_features = log2
+Improvement:
+0.7864 → 0.8034
+# XGBoost
+Best parameters:
+learning_rate = 0.1
+max_depth = 3
+n_estimators = 100
+subsample = 1.0
+colsample_bytree = 0.8
+Final accuracy: 0.8020
+# Final Model Comparison
+Model	Accuracy	Precision	Recall	F1-Score
+Baseline RF	0.7864	0.77	0.79	0.78
+Optimized RF	0.8034	0.80	0.80	0.80
+Basic XGBoost	0.8034	0.80	0.80	0.80
+Optimized XGBoost	0.8020	0.66	0.52	0.58
+
+# Optimized Random Forest with 80.34% accuracy
+
+Saved as: best_churn_model.pkl
+
+# Top 5 Most Important Features
+InternetService_Fiber optic
+Contract_Two year
+Contract_One year
+PaymentMethod_Electronic check
+InternetService_No
+# Key Learnings
+Cross-validation gives more reliable performance estimates
+Hyperparameter tuning improves model accuracy
+Both Random Forest and XGBoost performed similarly
+Feature importance helps understand why customers churn
+Recall for churn class is still low → model misses some churn customers
+# Next Steps (Week 4)
+Deploy model as a web application
+Build user interface for predictions
+Improve recall using:
+Class balancing (SMOTE)
+Threshold tuning
+Add model explainability (e.g., SHAP)
+
 
 ## 📬 Contact
 
